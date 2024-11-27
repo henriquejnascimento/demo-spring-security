@@ -2,7 +2,7 @@
 Demo Spring Security - JWT + OAUTH 2
 
 Note: <br /> 
- 1 - You need to generate the private RSA key and public RSA key and place it in the "/src/main/resources/keys/" directory. <br/>
+ 1 - You need to generate the private RSA key and public RSA key and place it in the "/src/main/resources/keys/" directory. I recommend using OpenSSL. <br/>
  2 - Use the sample collections ("/development/collections/") with Postman.
 
 ### Features implemented
