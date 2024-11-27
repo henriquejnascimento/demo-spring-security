@@ -5,6 +5,18 @@ Note: <br />
  1 - You need to generate the private RSA key and public RSA key and place it in the "/src/main/resources/keys/" directory. I recommend using OpenSSL. <br/>
  2 - Use the sample collections ("/development/collections/") with Postman.
 
+<br />
+Example generating private RSA key (Linux and macOS) <br />
+openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:4096
+
+<br />
+<br />
+Example generating public RSA key (Linux and macOS) <br />
+openssl rsa -pubout -in private_key.pem -out public_key.pem
+
+<br />
+<br />
+
 ### Features implemented
 
 <table>
