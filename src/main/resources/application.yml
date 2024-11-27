@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: demo-spring-security
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: demo
+    driver-class-name: org.postgresql.Driver
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+
+demo-spring-security:
+  jwt:
+    public-key: classpath:keys/public_key.pem
+    private-key: classpath:keys/private_key.pem
+    expiresIn: 86400 # 24h
+    issuer: demo-spring-security
+
+logging:
+  level:
+    com.henriquenascimento.springsecurity: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type: TRACE
