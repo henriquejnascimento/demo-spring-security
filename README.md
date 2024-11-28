@@ -1,22 +1,6 @@
 # demo-spring-security
 Demo Spring Security - JWT + OAUTH 2
 
-Note: <br /> 
- 1 - You need to generate the private RSA key and public RSA key and place it in the "/src/main/resources/keys/" directory. I recommend using OpenSSL. <br/>
- 2 - Use the sample collections ("/development/collections/") with Postman.
-
-<br />
-Example generating private RSA key (Linux and macOS) <br />
-openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:4096
-
-<br />
-<br />
-Example generating public RSA key (Linux and macOS) <br />
-openssl rsa -pubout -in private_key.pem -out public_key.pem
-
-<br />
-<br />
-
 ### Features implemented
 
 <table>
@@ -61,3 +45,27 @@ openssl rsa -pubout -in private_key.pem -out public_key.pem
     </tr>
   </tbody>
 </table>
+
+<br />
+
+### Requirements
+
+ - Java 21
+ - Docker
+ - Generate the private RSA key and public RSA key (see more information in "How to execute")
+
+### How to execute
+
+1 - You need to generate the private RSA key and public RSA key and place it in the "/src/main/resources/keys/" directory. I recommend using OpenSSL. <br/>
+
+Example generating private RSA key (Linux and macOS): <br />
+openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:4096
+
+Example generating public RSA key (Linux and macOS): <br />
+openssl rsa -pubout -in private_key.pem -out public_key.pem
+
+2 - Use the sample collections ("/development/collections/") with Postman.
+
+3 - Run the command "docker compose up" in "/development/docker/"
+
+4 - Run the command "./gradlew clean bootRun" in the root directory.
